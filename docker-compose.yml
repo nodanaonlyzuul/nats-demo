@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+  nats-server:
+    image: 'nats:2.1.0-alpine3.10'
+    ports:
+      - '4222:4222' # for clients
+      - '6222:6222' # routing port (clustering)
+      - '8222:8222' # HTTP management port for information reporting.
